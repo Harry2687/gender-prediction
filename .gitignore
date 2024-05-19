@@ -1,2 +1,5 @@
 model_parameters.pt
 .DS_Store
+modules/__pycache__
+/celeba
+/.vscode
