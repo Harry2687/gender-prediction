@@ -11,16 +11,16 @@ import time
 import modules.model as model
 
 # Download model if not available
-# if os.path.exists('celeba/') == False:
-#     url = 'https://drive.google.com/file/d/1_oL160xwrOiF5x56GddAUtOuXe6bIwpL/view?usp=sharing'
-#     output = 'download.zip'
-#     gdown.download(url, output, fuzzy=True)
+if os.path.exists('celeba/') == False:
+    url = 'https://drive.google.com/file/d/13vkq4tFCPE8O78KTj84HHM6kBnYkt8gP/view?usp=sharing'
+    output = 'download.zip'
+    gdown.download(url, output, fuzzy=True)
 
-#     with zipfile.ZipFile(output, 'r') as zip_ref:
-#         zip_ref.extractall()
+    with zipfile.ZipFile(output, 'r') as zip_ref:
+        zip_ref.extractall()
 
-#     os.remove(output)
-#     shutil.rmtree('__MACOSX')
+    os.remove(output)
+    shutil.rmtree('__MACOSX')
 
 # Set device
 if torch.backends.mps.is_available():
