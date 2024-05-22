@@ -31,4 +31,4 @@ Run `predict.py`, this will download pre-trained model parameters and make gende
 
 ## Training
 
-Run `train.py`, this will download the training data used train my pre-trained model and start training the neural network on the your local device.
+Run `train.py`, this will download the training data used to train my pre-trained model and start training the neural network on the your local device.
