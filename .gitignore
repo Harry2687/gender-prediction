@@ -3,3 +3,4 @@ model_parameters.pt
 modules/__pycache__
 /celeba
 /.vscode
+venv
