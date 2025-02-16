@@ -1,6 +1,6 @@
 model_parameters.pt
 .DS_Store
-modules/__pycache__
+**/__pycache__
 /celeba
 /.vscode
 venv
