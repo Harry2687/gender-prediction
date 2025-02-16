@@ -12,6 +12,8 @@ RUN pip install --upgrade pip \
 
 COPY . .
 
+RUN python download_model.py
+
 EXPOSE 3000
 
-CMD ["shiny", "run", "shinyapp/app.py", "-h", "0.0.0.0", "-p", "3000"]
+CMD ["shiny", "run", "app.py", "-h", "0.0.0.0", "-p", "3000"]
