@@ -4,6 +4,7 @@ emoji: 👁
 colorFrom: pink
 colorTo: yellow
 sdk: docker
+app_port: 3000
 pinned: true
 short_description: Shiny application to demo my gender classification CNN.
 ---
