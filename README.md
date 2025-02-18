@@ -1,3 +1,14 @@
+---
+title: Gender CNN Demo
+emoji: 👁
+colorFrom: pink
+colorTo: yellow
+sdk: docker
+pinned: true
+short_description: Shiny application to demo my gender classification CNN.
+---
+Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+
 # Gender-Prediction
 
 Scripts to train my neural network, or use my pre-trained parameters to make predictions.
