@@ -1,7 +1,10 @@
 import os
-import gdown
+from huggingface_hub import hf_hub_download
 
-modelsave_name = 'model_parameters.pt'
-if os.path.isfile(modelsave_name) == False:
-    url = 'https://drive.google.com/file/d/1_mYn2LrhG080Xvt26tWBtJ8U_0F2E1-s/view?usp=sharing'
-    gdown.download(url, output=modelsave_name, fuzzy=True)
+model_name = 'resnetModel_128_epoch_2.pt'
+if os.path.isfile(model_name) == False:
+    hf_hub_download(
+        repo_id='Harry2687/Gender-CNN',
+        filename=model_name,
+        local_dir='./'
+    )
