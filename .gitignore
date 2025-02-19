@@ -1,6 +1,9 @@
-model_parameters.pt
-.DS_Store
-**/__pycache__
-/celeba
-/.vscode
+# Model files
+*.pt
+
+# Python
 venv
+**/__pycache__
+
+# Mac
+.DS_Store
