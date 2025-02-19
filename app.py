@@ -3,12 +3,18 @@ from shiny.types import ImgData
 
 from gender_cnn.predict import predict_gender
 
-app_ui = ui.page_fluid(
+app_ui = ui.page_fillable(
     ui.panel_title('Gender Classifier'),
-    ui.input_file('image', 'Upload image', accept=['.png', '.jpg', '.jpeg']),
-    ui.output_image('show_image'),
-    ui.input_action_button('predict_gender', 'Predict'),
-    ui.output_text('prediction')
+    ui.card(
+        ui.card_header('Input'),
+         ui.input_file('image', 'Upload image', accept=['.png', '.jpg', '.jpeg']),
+         ui.output_image('show_image')
+    ),
+    ui.card(
+        ui.card_header('Predict'),
+        ui.input_action_button('predict_gender', 'Make Prediction'),
+        ui.output_text('prediction')
+    )
 )
 
 def server(input, output, session):
