@@ -3,13 +3,7 @@ import torchvision.transforms as transforms
 from PIL import Image
 from .model import resnetModel_128
 
-def predict_gender(image_path: str):
-    # Constants
-    imsize = 128
-    classes = ('Female', 'Male')
-    model_name = 'resnetModel_128_epoch_2.pt'
-
-    # Set Backend
+def get_backend():
     if torch.backends.mps.is_available():
         device = torch.device('mps')
         device_name = 'Apple Silicon GPU'
@@ -19,6 +13,17 @@ def predict_gender(image_path: str):
     else:
         device = torch.device('cpu')
         device_name = 'CPU'
+
+    return [device, device_name]
+
+def predict_gender(image_path: str):
+    # Constants
+    imsize = 128
+    classes = ('Female', 'Male')
+    model_name = 'resnetModel_128_epoch_2.pt'
+
+    # Set Backend
+    device, device_name = get_backend()
 
     # Init model
     resnet = resnetModel_128().to(device)
